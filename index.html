@@ -16,6 +16,7 @@
     <input type="number" id="size" min="1" max="20" value="10">
     <button onclick="generateTable()">產生</button>
     <div id="table-container"></div>
+    <div id="result-container"></div> <!-- 新增顯示結果的區域 -->
     <script>
         function generateTable() {
             let n = document.getElementById("size").value;
@@ -29,6 +30,9 @@
             }
             tableHTML += "</table>";
             document.getElementById("table-container").innerHTML = tableHTML;
+
+            // 顯示 N×N= 的結果
+            document.getElementById("result-container").innerHTML = `<p>${n} × ${n} = ${n * n}</p>`;
         }
     </script>
 </body>
